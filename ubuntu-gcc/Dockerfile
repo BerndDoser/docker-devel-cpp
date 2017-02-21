@@ -9,9 +9,10 @@ RUN apt-get update \
     bzip2 \
     curl \
     git \
-    libz-dev \
+    libboost-all-dev \
     libbz2-dev \
     libopenmpi-dev \
+    libz-dev \
     make \
     openmpi-bin \
     openmpi-common  \
@@ -34,6 +35,4 @@ RUN apt-add-repository -y ppa:ubuntu-toolchain-r/test \
  && apt-get clean \
  && ln -sf /usr/bin/g++-4.9 /usr/bin/g++ \
  && ln -sf /usr/bin/gcc-4.9 /usr/bin/gcc
-
-ENTRYPOINT ["cat"]
 
