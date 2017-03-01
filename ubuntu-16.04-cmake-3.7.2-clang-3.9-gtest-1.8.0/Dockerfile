@@ -1,4 +1,4 @@
-FROM bernddoser/docker-devel-cpp:ubuntu-16.04-cmake-3.7.2-clnag-3.9
+FROM bernddoser/docker-devel-cpp:ubuntu-16.04-cmake-3.7.2-clang-3.9
 
 MAINTAINER Bernd Doser <bernd.doser@h-its.org>
 
