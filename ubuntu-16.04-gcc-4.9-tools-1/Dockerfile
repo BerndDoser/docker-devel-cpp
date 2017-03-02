@@ -5,6 +5,7 @@ MAINTAINER Bernd Doser <bernd.doser@h-its.org>
 RUN apt-get update \
  && apt-get install -y \
     doxygen \
+    git \
     libboost-all-dev \
     libopenblas-dev \
     make \
@@ -32,3 +33,5 @@ RUN wget https://github.com/google/googletest/archive/release-1.8.0.tar.gz \
  && make install \
  && rm -r /tmp/googletest-release-1.8.0
 
+# Reset link from base container, because one of the installed packages install gcc-5 and overwrite it
+RUN ln -sf /usr/bin/gcc-4.9 /usr/bin/gcc
