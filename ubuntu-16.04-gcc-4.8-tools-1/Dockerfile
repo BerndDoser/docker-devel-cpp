@@ -1,10 +1,11 @@
-FROM bernddoser/docker-devel-cpp:ubuntu-16.04-gcc-6
+FROM bernddoser/docker-devel-cpp:ubuntu-16.04-gcc-4.8
 
 MAINTAINER Bernd Doser <bernd.doser@h-its.org>
 
 RUN apt-get update \
  && apt-get install -y \
     doxygen \
+    git \
     libboost-all-dev \
     libopenblas-dev \
     make \
@@ -33,4 +34,4 @@ RUN wget https://github.com/google/googletest/archive/release-1.8.0.tar.gz \
  && rm -r /tmp/googletest-release-1.8.0
 
 # Reset link from base container, because one of the installed packages install gcc-5 and overwrite it
-RUN ln -sf /usr/bin/gcc-6 /usr/bin/gcc
+RUN ln -sf /usr/bin/gcc-4.8 /usr/bin/gcc
