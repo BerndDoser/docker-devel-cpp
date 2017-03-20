@@ -5,6 +5,7 @@ MAINTAINER Bernd Doser <bernd.doser@h-its.org>
 RUN apt-get update \
  && apt-get install -y \
     graphviz \
+    make \
     mscgen \
     texlive \
     texlive-lang-english \
