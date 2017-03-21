@@ -1,16 +1,14 @@
-FROM ubuntu:16.04
+FROM bernddoser/docker-devel-cpp:ubuntu-16.04
 
 MAINTAINER Bernd Doser <bernd.doser@h-its.org>
 
 RUN apt-get update \
  && apt-get install -y \
     graphviz \
-    make \
     mscgen \
     texlive \
     texlive-lang-english \
     texlive-latex-extra \
-    wget \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
@@ -20,4 +18,3 @@ RUN wget http://ftp.stack.nl/pub/users/dimitri/doxygen-1.8.13.linux.bin.tar.gz \
  && tar xf doxygen-1.8.13.linux.bin.tar.gz \
  && rm doxygen-1.8.13.linux.bin.tar.gz \
  && ln -sf /opt/doxygen-1.8.13/bin/doxygen /usr/bin/doxygen
-

@@ -7,6 +7,7 @@ RUN apt-get update \
     curl \
     git \
     make \
+    software-properties-common \
     wget \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
