@@ -8,3 +8,6 @@ RUN apt-add-repository -y ppa:ubuntu-toolchain-r/test \
  && apt-get clean \
  && ln -sf /usr/bin/g++-4.8 /usr/bin/g++ \
  && ln -sf /usr/bin/gcc-4.8 /usr/bin/gcc
+
+ENV CC gcc
+ENV CXX g++

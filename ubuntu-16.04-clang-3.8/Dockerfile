@@ -8,4 +8,9 @@ RUN wget -O - http://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add - \
  && apt-get install -y clang-3.8 lldb-3.8 \
  && apt-get clean \
  && update-alternatives --install /usr/bin/clang clang /usr/bin/clang-3.8 100 \
+ && update-alternatives --install /usr/bin/clang-cpp clang-cpp /usr/bin/clang-cpp-3.8 100 \
  && update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-3.8 100
+
+ENV CC clang
+ENV CPP clang-cpp
+ENV CXX clang++
