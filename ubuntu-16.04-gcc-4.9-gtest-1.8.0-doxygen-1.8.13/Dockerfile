@@ -18,3 +18,5 @@ RUN wget http://ftp.stack.nl/pub/users/dimitri/doxygen-1.8.13.linux.bin.tar.gz \
  && tar xf doxygen-1.8.13.linux.bin.tar.gz \
  && rm doxygen-1.8.13.linux.bin.tar.gz \
  && ln -sf /opt/doxygen-1.8.13/bin/doxygen /usr/bin/doxygen
+
+WORKDIR /

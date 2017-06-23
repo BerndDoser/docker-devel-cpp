@@ -14,3 +14,7 @@ RUN wget https://github.com/google/googletest/archive/release-1.8.0.tar.gz \
  && make -j \
  && make install \
  && rm -r /tmp/googletest-release-1.8.0
+
+WORKDIR /
+
+ENV GTEST_ROOT /opt/googletest-1.8.0
