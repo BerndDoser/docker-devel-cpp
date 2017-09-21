@@ -8,5 +8,8 @@ RUN apt-get update \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
-RUN pip install --upgrade pip
-RUN pip install -I conan==0.26.1 
+RUN pip install --upgrade pip \
+ && pip install -I conan==0.26.1 
+
+RUN mkdir -p .conan \
+ && chmod 777 .conan
