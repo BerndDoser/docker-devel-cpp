@@ -3,7 +3,7 @@ FROM bernddoser/docker-devel-cpp:ubuntu-16.04-gcc-7
 MAINTAINER Bernd Doser <bernd.doser@h-its.org>
 
 RUN apt-get update \
- && apt-get install -y \
+ && apt-get install -y --no-install-recommends \
     python-pip \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
