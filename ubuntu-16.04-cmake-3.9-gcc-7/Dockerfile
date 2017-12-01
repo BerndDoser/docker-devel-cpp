@@ -4,7 +4,7 @@ LABEL maintainer="Bernd Doser <bernd.doser@braintwister.eu>"
 
 RUN apt-add-repository -y ppa:ubuntu-toolchain-r/test \
  && apt-get update \
- && apt-get install -y
+ && apt-get install -y \
     gcc-7 \
     g++-7 \
     gdb \
