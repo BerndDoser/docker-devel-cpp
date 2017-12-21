@@ -1,6 +1,6 @@
-FROM ubuntu:16.04
+FROM bernddoser/docker-devel-cpp:ubuntu-16.04
 
-MAINTAINER Bernd Doser <bernd.doser@h-its.org>
+LABEL maintainer="Bernd Doser <bernd.doser@braintwister.eu>"
 
 RUN apt-get update \
   && apt-get install -y apt-transport-https \
@@ -16,4 +16,4 @@ RUN add-apt-repository \
     stable"
 
 RUN apt-get update \
-  && apt-get install -y docker-ce
+  && apt-get install -y docker-ce=17.09.1~ce-0~ubuntu
