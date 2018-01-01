@@ -33,7 +33,7 @@ RUN mkdir -p /home/eclipse \
  && groupadd -r eclipse \
  && useradd -r -g eclipse -d /home/eclipse -s /sbin/nologin -c "Docker image user" eclipse
 RUN chown eclipse:eclipse /home/eclipse
-RUN sudo usermod -aG docker eclipse
+RUN usermod -aG docker eclipse
 USER eclipse
 WORKDIR /home/eclipse
 
