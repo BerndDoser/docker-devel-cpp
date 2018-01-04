@@ -28,5 +28,6 @@ USER eclipse
 WORKDIR /home/eclipse
 
 ENV CONAN_USER_HOME /home/eclipse
+RUN conan remote add conan-community https://api.bintray.com/conan/conan-community/conan
 
 CMD $INSTALLATION_DIR/eclipse/eclipse
