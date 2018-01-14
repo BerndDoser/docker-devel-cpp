@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 
-MAINTAINER Bernd Doser <bernd.doser@h-its.org>
+LABEL maintainer="Bernd Doser <bernd.doser@braintwister.eu>"
 
 RUN apt-get update \
  && apt-get install -y \

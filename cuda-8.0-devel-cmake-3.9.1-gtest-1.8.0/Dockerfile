@@ -1,6 +1,6 @@
 FROM bernddoser/docker-devel-cpp:cuda-8.0-devel-cmake-3.9.1
 
-MAINTAINER Bernd Doser <bernd.doser@h-its.org>
+LABEL maintainer="Bernd Doser <bernd.doser@braintwister.eu>"
 
 WORKDIR /tmp
 

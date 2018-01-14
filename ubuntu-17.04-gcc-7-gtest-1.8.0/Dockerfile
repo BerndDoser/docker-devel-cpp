@@ -1,6 +1,6 @@
 FROM bernddoser/docker-devel-cpp:ubuntu-17.04-gcc-7
 
-MAINTAINER Bernd Doser <bernd.doser@h-its.org>
+LABEL maintainer="Bernd Doser <bernd.doser@braintwister.eu>"
 
 WORKDIR /tmp
 

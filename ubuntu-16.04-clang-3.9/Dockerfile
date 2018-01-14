@@ -1,6 +1,6 @@
 FROM bernddoser/docker-devel-cpp:ubuntu-16.04
 
-MAINTAINER Bernd Doser <bernd.doser@h-its.org>
+LABEL maintainer="Bernd Doser <bernd.doser@braintwister.eu>"
 
 RUN wget -O - http://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add - \
  && echo "deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-3.9 main" >> /etc/apt/sources.list \

@@ -1,6 +1,6 @@
 FROM bernddoser/docker-devel-cpp:ubuntu-17.04
 
-MAINTAINER Bernd Doser <bernd.doser@h-its.org>
+LABEL maintainer="Bernd Doser <bernd.doser@braintwister.eu>"
 
 RUN apt-add-repository -y ppa:ubuntu-toolchain-r/test \
  && apt-get update \
