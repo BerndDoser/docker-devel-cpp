@@ -20,20 +20,12 @@ ENV INSTALLATION_DIR /usr/local
 
 RUN curl -L "$DOWNLOAD_URL" | tar xz -C $INSTALLATION_DIR
 
-# Create eclipse user
-RUN mkdir -p /home/eclipse \
- && groupadd -r eclipse \
- && useradd -r -g eclipse -d /home/eclipse -s /sbin/nologin -c "Docker image user" eclipse
-RUN chown eclipse:eclipse /home/eclipse
-USER eclipse
-WORKDIR /home/eclipse
-
 # Install plugins
-ADD install_plugins.py plugins.yml /home/eclipse/
+ADD install_plugins.py plugins.yml /
 RUN ./install_plugins.py
 
 # Config conan
-ENV CONAN_USER_HOME /home/eclipse
+ENV CONAN_USER_HOME /root
 RUN conan remote add conan-community https://api.bintray.com/conan/conan-community/conan
 
 CMD $INSTALLATION_DIR/eclipse/eclipse
