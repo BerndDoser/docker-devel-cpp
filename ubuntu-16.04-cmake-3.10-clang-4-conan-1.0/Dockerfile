@@ -1,4 +1,4 @@
-FROM bernddoser/docker-devel-cpp:ubuntu-16.04-cmake-3.10-gcc-7
+FROM bernddoser/docker-devel-cpp:ubuntu-16.04-cmake-3.10-clang-4
 
 LABEL maintainer="Bernd Doser <bernd.doser@braintwister.eu>"
 
@@ -10,4 +10,6 @@ RUN apt-get update \
 
 RUN pip install --upgrade pip \
  && pip install -I setuptools \
- && pip install -I conan==1.0.1
+ && pip install -I conan==1.0
+
+RUN conan remote add conan-community https://api.bintray.com/conan/conan-community/conan
