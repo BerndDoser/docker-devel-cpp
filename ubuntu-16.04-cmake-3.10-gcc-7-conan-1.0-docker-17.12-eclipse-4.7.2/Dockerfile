@@ -1,4 +1,4 @@
-FROM bernddoser/docker-devel-cpp:ubuntu-16.04-cmake-3.10-gcc-7-conan-1.0.1
+FROM bernddoser/docker-devel-cpp:ubuntu-16.04-cmake-3.10-gcc-7-conan-1.0-docker-17.12
 
 LABEL maintainer="Bernd Doser <bernd.doser@braintwister.eu>"
 
@@ -23,9 +23,5 @@ RUN curl -L "$DOWNLOAD_URL" | tar xz -C $INSTALLATION_DIR
 # Install plugins
 ADD install_plugins.py plugins.yml /
 RUN ./install_plugins.py
-
-# Config conan
-ENV CONAN_USER_HOME /root
-RUN conan remote add conan-community https://api.bintray.com/conan/conan-community/conan
 
 CMD $INSTALLATION_DIR/eclipse/eclipse

@@ -1,4 +1,4 @@
-FROM bernddoser/docker-devel-cpp:ubuntu-16.04-cmake-3.10-gcc-7-conan-1.0.1
+FROM bernddoser/docker-devel-cpp:ubuntu-16.04-cmake-3.10-gcc-7-conan-1.0
 
 LABEL maintainer="Bernd Doser <bernd.doser@braintwister.eu>"
 
