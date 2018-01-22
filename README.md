@@ -16,6 +16,18 @@ The advantages are:
  * docker
  * docker-compose (recommened)
 
+## Docker image structure
+
+The docker images are structured modular with the syntax `module1` - `version1`
+- `module2` - `version2` - `module3` - `version3` - `...`, where image
+`module1-version1-module2-version2-module3-version3` is using the image
+`module1-version1-module2-version2` as base. The name of the directory is used
+as docker image label, so that it can be pulled with
+
+```bash
+docker pull bernddoser/docker-devel-cpp:module1-version1-module2-version2-module3-version3
+```
+
 ## Eclipse IDE
 
 A ready-for-action eclipse IDE with 
@@ -27,13 +39,13 @@ A ready-for-action eclipse IDE with
 
 installed can be started by
 
-'''bash
+```bash
 docker run -e /tmp/.X11-unix:/tmp/.X11-unix:ro -D DISPLAY bernddoser/docker-devel-cpp:ubuntu-16.04-cmake-3.10-gcc-7-conan-1.0-docker-17.12-eclipse-4.7.2
-'''
+```
 
 or using docker-compose by
 
-'''yaml
+```yaml
 version: "3"
 services:
 
@@ -48,13 +60,13 @@ services:
 
 volumes:
   home:
-'''
+```
 
 ## Jenkins build container
 
 A declarative Jenkinsfile can look like
 
-'''groovy
+```groovy
 pipeline {
 
   agent {
@@ -86,4 +98,4 @@ pipeline {
     }
   }
 }
-'''
+```
