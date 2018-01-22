@@ -24,4 +24,13 @@ RUN curl -L "$DOWNLOAD_URL" | tar xz -C $INSTALLATION_DIR
 ADD install_plugins.py plugins.yml /
 RUN ./install_plugins.py
 
+# Create eclipse user
+RUN mkdir -p /home/eclipse \
+ && groupadd -r eclipse \
+ && useradd -r -g eclipse -d /home/eclipse -s /sbin/nologin -c "Docker image user" eclipse
+RUN chown eclipse:eclipse /home/eclipse
+RUN usermod -aG docker eclipse
+USER eclipse
+WORKDIR /home/eclipse
+
 CMD $INSTALLATION_DIR/eclipse/eclipse
