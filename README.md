@@ -18,9 +18,9 @@ The advantages are:
 
 ## Docker image structure
 
-The docker images are structured modular with the syntax `module1` - `version1`
-- `module2` - `version2` - `module3` - `version3` - `...`, where image
-`module1-version1-module2-version2-module3-version3` is using the image
+The docker images are structured modular with the syntax
+`module1` - `version1` - `module2` - `version2` - `module3` - `version3` - `...`,
+where image `module1-version1-module2-version2-module3-version3` is using the image
 `module1-version1-module2-version2` as base. The name of the directory is used
 as docker image label, so that it can be pulled with
 
