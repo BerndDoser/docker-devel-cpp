@@ -3,10 +3,12 @@ FROM bernddoser/docker-devel-cpp:ubuntu-16.04-cmake-3.10-gcc-7-conan-1.0-docker-
 LABEL maintainer="Bernd Doser <bernd.doser@braintwister.eu>"
 
 RUN apt-get update \
- && apt-get install -y \
+ && apt-get install -y --no-install-recommends \
     curl \
+    firefox \
     libgtk2.0-0 \
     make \
+    python3-setuptools \
     openjdk-8-jdk \
     python3-pip \
  && apt-get clean \
