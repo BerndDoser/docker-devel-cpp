@@ -3,10 +3,11 @@ FROM bernddoser/docker-devel-cpp:ubuntu-16.04-cmake-3.10-gcc-7-conan-1.0
 LABEL maintainer="Bernd Doser <bernd.doser@braintwister.eu>"
 
 RUN apt-get update \
-  && apt-get install -y apt-transport-https \
-                        ca-certificates \
-                        curl \
-                        software-properties-common
+ && apt-get install -y \
+    apt-transport-https \
+    ca-certificates \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
 
 RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 
@@ -16,4 +17,7 @@ RUN add-apt-repository \
     stable"
 
 RUN apt-get update \
-  && apt-get install -y docker-ce=17.12.0~ce-0~ubuntu
+ && apt-get install -y \
+    docker-ce=17.12.0~ce-0~ubuntu \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
