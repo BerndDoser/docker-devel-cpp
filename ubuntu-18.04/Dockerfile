@@ -7,6 +7,7 @@ RUN apt-get update \
     curl \
     git \
     make \
+    ninja-build \
     software-properties-common \
     vim \
     wget \
