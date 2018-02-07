@@ -1,5 +1,10 @@
 # docker-devel-cpp
 
+## DEPRECATION NOTICE
+
+:exclamation:
+**Please find the new repository at** https://github.com/BrainTwister/docker-devel-env
+
 Docker enables a great way for fast, small, reproducable, and portable software development environments.
 
 The advantages are:
